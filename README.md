@@ -21,8 +21,6 @@ Transform your Arduino Uno into a motion-controlled mouse using a gyroscope and 
 
 ## 📷 Preview
 
-Add screenshots or GIFs here showing the controller in action.
-
 ```text
 Arduino Uno + Gyroscope
           │
@@ -42,7 +40,7 @@ Arduino Uno + Gyroscope
 
 * Arduino Uno
 * MPU6050 (or compatible gyroscope/accelerometer)
-* 3 Push Buttons
+* 3 Push Buttons (I used HATOR Aurum mechanical switches)
 * USB Cable
 
 ---
@@ -65,20 +63,33 @@ pip install pyserial pynput
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/username/arduino-gyro-mouse.git
-cd arduino-gyro-mouse
+git clone https://github.com/tyerbBased/glovedriver.git
+cd glovedriver
 ```
 
 ### 2. Upload Arduino Firmware
 
-1. Open `arduino_mouse.ino`
+1. Open `glove_arduino.ino`
 2. Select your Arduino Uno board
 3. Upload the sketch
 
 ### 3. Run the Python Receiver
 
 ```bash
-python receiver.py
+(LINUX)
+cd Build/
+./u_glove_driver.AppImage
+
+(WINDOWS 10/11)
+cd Build/
+u_glove_driver.exe
+```
+
+OR
+
+```bash
+cd Python/
+python u_glove_driver.py
 ```
 
 ---
@@ -87,9 +98,10 @@ python receiver.py
 
 | Button   | Action        |
 | -------- | ------------- |
-| Button 1 | Left Click    |
-| Button 2 | Right Click   |
-| Button 3 | Custom Action |
+| Button 1 (Pin 2)    | Stop Moving  |
+| Button 2 (Pin 3)    | Left Click   |
+| Button 3 (Pin 4)    | Right Action |
+| Button 1 + Button 3 | Scrolling    |
 
 Moving the gyroscope controls the mouse cursor.
 
@@ -98,16 +110,17 @@ Moving the gyroscope controls the mouse cursor.
 ## 📂 Project Structure
 
 ```text
-arduino-gyro-mouse/
+glovedriver/
 │
 ├── Arduino/
-│   └── arduino_mouse.ino
+│   └── glove_arduino.ino
 │
 ├── Python/
-│   └── receiver.py
+│   └── u_glove_driver.py          (You can edit the receiver script)
 │
-├── Assets/
-│   └── screenshots/
+├── Build/
+│   └── u_glove_driver.AppImage/   (Linux)
+│   └── u_glove_driver.exe/        (Windows 10/11)
 │
 └── README.md
 ```
@@ -138,17 +151,6 @@ You can easily modify:
 * Button mappings
 * Smoothing algorithms
 * Serial communication speed
-
----
-
-## 🤝 Contributing
-
-Contributions, bug reports, and feature requests are welcome.
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Open a Pull Request
 
 ---
 
