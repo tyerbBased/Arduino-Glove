@@ -133,7 +133,6 @@ You can easily modify:
 * Cursor sensitivity
 * Dead zone filtering
 * Button mappings
-* Smoothing algorithms
 * Serial communication speed
 
 ---
