@@ -93,6 +93,7 @@ OR
 cd Python/
 python u_glove_driver.py
 ```
+You can customize sensitivity inside python script.
 
 ---
 
