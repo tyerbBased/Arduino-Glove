@@ -63,37 +63,22 @@ pip install pyserial pynput
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/tyerbBased/glovedriver.git
-cd glovedriver
+git clone https://github.com/tyerbBased/Arduino-Glove.git
+cd Arduino-Glove
 ```
 
 ### 2. Upload Arduino Firmware
 
-1. Open `Arduino/glove_arduino.ino`
+1. Open `glove-controller.ino` or `glove-controller-with-lcd.ino` if you want to use LCD.
 2. Select your Arduino Uno board
 3. Upload the sketch
 
 ### 3. Run the Python Receiver
 
-LINUX
 ```bash
-cd Build/
-./u_glove_driver.AppImage
+python glove-driver.py
 ```
-
-WINDOWS 10/11
-```bash
-cd Build/
-u_glove_driver.exe
-```
-
-OR
-
-```bash
-cd Python/
-python u_glove_driver.py
-```
-You can customize sensitivity inside python script.
+You can customize sensitivity or dead-zones inside python script.
 
 ---
 
@@ -113,17 +98,13 @@ Moving the gyroscope controls the mouse cursor.
 ## 📂 Project Structure
 
 ```text
-glovedriver/
+Arduino-Glove/
 │
-├── Arduino/
-│   └── glove_arduino.ino
+├── glove-controller.ino
 │
-├── Python/
-│   └── u_glove_driver.py          (You can edit the receiver script)
+├── glove-controller-with-lcd.ino
 │
-├── Build/
-│   └── u_glove_driver.AppImage/   (Linux)
-│   └── u_glove_driver.exe/        (Windows 10/11)
+├── glove-driver.py
 │
 └── README.md
 ```
