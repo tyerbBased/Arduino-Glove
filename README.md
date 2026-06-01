@@ -69,7 +69,7 @@ cd glovedriver
 
 ### 2. Upload Arduino Firmware
 
-1. Open `glove_arduino.ino`
+1. Open `Arduino/glove_arduino.ino`
 2. Select your Arduino Uno board
 3. Upload the sketch
 
