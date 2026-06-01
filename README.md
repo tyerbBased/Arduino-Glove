@@ -75,13 +75,13 @@ cd glovedriver
 
 ### 3. Run the Python Receiver
 
-(LINUX)
+LINUX
 ```bash
 cd Build/
 ./u_glove_driver.AppImage
 ```
 
-(WINDOWS 10/11)
+WINDOWS 10/11
 ```bash
 cd Build/
 u_glove_driver.exe
