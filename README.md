@@ -69,7 +69,7 @@ cd Arduino-Glove
 
 ### 2. Upload Arduino Firmware
 
-1. Open `glove-controller.ino` or `glove-controller-with-lcd.ino` if you want to use LCD.
+1. Open `glove-controller.ino` or `glove-controller-without-lcd.ino` if you don't want to use it with LCD.
 2. Select your Arduino Uno board
 3. Upload the sketch
 
